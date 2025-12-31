@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -11,7 +12,9 @@ import Blog from './pages/Blog'
 
 function App() {
   return (
+    
     <Router>
+      <Analytics />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <AnimatePresence mode="wait">
